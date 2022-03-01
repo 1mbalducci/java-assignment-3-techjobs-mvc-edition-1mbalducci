@@ -20,8 +20,9 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
-                <label th:for="${column.key}" th:text="${column.value}"></label>
+                        th:checked="${column.key == searchType}"/>
+<!--                th:value="${column.value}"-->
+                <label th:for="${column.key}" th:text="${column.value}" ></label>
             </span>
 
         </p>
@@ -39,6 +40,6 @@
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
 </div>
-
+<div th:replace="fragments :: job-results-table"></div>
 </body>
 </html>

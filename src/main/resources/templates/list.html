@@ -20,8 +20,10 @@
             <tr>
                 <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
-                <td></td> <!-- Feel free to remove or modify this element if necessary. -->
-
+<!--                <td></td> &lt;!&ndash; Feel free to remove or modify this element if necessary. &ndash;&gt;-->
+<!--                    <td th:text="${all}">-->
+<!--                        <a th:href="@{/list/jobs(column=${tableChoices.key[4]},value=${tableChoices.get[4]})}" th:text="${all}"></a>&ndash;&gt;-->
+<!--                    </td>-->
                 <td th:each="category : ${tableChoices}">
                     <ul>
                         <li th:each="item : ${category.value}">

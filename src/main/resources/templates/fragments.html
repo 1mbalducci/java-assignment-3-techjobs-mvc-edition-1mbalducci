@@ -26,6 +26,36 @@
             </div>
         </div>
     </div>
-
+    <table th:fragment="job-results-table" class="job-listing">
+        <tr th:block th:each="job : ${jobs}">
+            <td>
+                <!--      #strings.capitalizeWords(title)  <ul>-->
+<!--            <p th:utext = "'Id: &lt;strong&gt;'+ ${job.id}"></p>-->
+                <p>
+                    <strong th:text="'Id: '" />
+<!--                    <span ></span>-->
+                   <span th:text="${job.id}"></span>
+                </p>
+                <p> <strong th:text = "'Name: '" />
+                    <span th:text="${job.name}"></span>
+                </p>
+                <p> <strong th:text = "'Employer: '" />
+                    <span th:text="${job.employer}"></span>
+<!--                    <a th:href="@{/list/jobs(column=${tableChoices.employer},value=${job.employer})}" th:text="${item}"></a>&ndash;&gt;&ndash;&gt;-->
+                </p>
+                <p> <strong th:text = "'Location: '" />
+                    <span th:text="${job.location}"></span>
+                </p>
+                <p> <strong th:text = "'Position Type: '" />
+                    <span th:text="${job.positionType}"></span>
+                </p>
+                <p> <strong th:text = "'Core Competency: '" />
+                    <span th:text="${job.coreCompetency}"></span>
+                </p>
+                <!--        </ul>-->
+            </td>
+        </tr>
+        </th:block>
+    </table>
 </body>
 </html>
