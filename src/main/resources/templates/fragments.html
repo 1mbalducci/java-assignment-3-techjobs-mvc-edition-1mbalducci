@@ -40,8 +40,8 @@
                     <span th:text="${job.name}"></span>
                 </p>
                 <p> <strong th:text = "'Employer: '" />
-                    <span th:text="${job.employer}"></span>
-<!--                    <a th:href="@{/list/jobs(column=${tableChoices.employer},value=${job.employer})}" th:text="${item}"></a>&ndash;&gt;&ndash;&gt;-->
+<!--                    <span th:text="${job.employer}"></span>-->
+                    <a th:href="@{/list/jobs(column=employer,value=${job.employer})}" th:text="${job.employer}"></a>
                 </p>
                 <p> <strong th:text = "'Location: '" />
                     <span th:text="${job.location}"></span>
